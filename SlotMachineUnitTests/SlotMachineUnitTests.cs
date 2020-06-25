@@ -2,7 +2,7 @@
 namespace SlotMachineUnitTests
 {
   using Microsoft.AspNetCore.Mvc;
-
+  using SlotMachine.BisinessLayer;
   using SlotMachine.Common;
   using SlotMachine.Controllers;
   using SlotMachine.Models;
@@ -15,6 +15,11 @@ namespace SlotMachineUnitTests
   public class SlotMachineUnitTests
   {
     /// <summary>
+    /// _slotmachine
+    /// </summary>
+    private readonly ISlotMachine _slotmachine;
+
+    /// <summary>
     /// _homecontroller field
     /// </summary>
     private readonly HomeController _homecontroller;
@@ -24,7 +29,8 @@ namespace SlotMachineUnitTests
     /// </summary>
     public SlotMachineUnitTests()
     {
-      _homecontroller = new HomeController();
+      _slotmachine = new SlotMachine();
+      _homecontroller = new HomeController(_slotmachine);
     }
 
     /// <summary>
@@ -83,7 +89,7 @@ namespace SlotMachineUnitTests
       testSlotMachine.Balance = 200;
 
       // Act
-      _homecontroller.CalculateProfit(ref testSlotMachine);
+      _slotmachine.CalculateProfit(ref testSlotMachine);
 
       // Assert
       Assert.Equal(20, testSlotMachine.Won);
@@ -117,7 +123,7 @@ namespace SlotMachineUnitTests
       int test = 0;
 
       // Act
-      test = _homecontroller.GetRandomNumberInRange();
+      test = _slotmachine.GetRandomNumberInRange();
 
       // Assert
       Assert.InRange<int>(test, 0, Constants.SymbolWeights.Count);
