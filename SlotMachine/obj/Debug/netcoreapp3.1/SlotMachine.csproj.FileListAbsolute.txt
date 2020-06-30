@@ -33,3 +33,4 @@ C:\Users\metod\OneDrive\Desktop\SlotMachine\New folder\SimplifiedSlotMachine\Slo
 C:\Users\metod\OneDrive\Desktop\SlotMachine\New folder\SimplifiedSlotMachine\SlotMachine\obj\Debug\netcoreapp3.1\SlotMachine.pdb
 C:\Users\metod\OneDrive\Desktop\SlotMachine\New folder\SimplifiedSlotMachine\SlotMachine\obj\Debug\netcoreapp3.1\SlotMachine.genruntimeconfig.cache
 C:\Users\metod\OneDrive\Desktop\SlotMachine\New folder\SimplifiedSlotMachine\SlotMachine\obj\Debug\netcoreapp3.1\SlotMachine.csproj.CopyComplete
+C:\Users\metod\OneDrive\Desktop\SlotMachine\New folder\SimplifiedSlotMachine\SlotMachine\obj\Debug\netcoreapp3.1\SlotMachine.csprojAssemblyReference.cache

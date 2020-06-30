@@ -2,6 +2,7 @@
 namespace SlotMachineUnitTests
 {
   using Microsoft.AspNetCore.Mvc;
+
   using SlotMachine.BisinessLayer;
   using SlotMachine.Common;
   using SlotMachine.Controllers;

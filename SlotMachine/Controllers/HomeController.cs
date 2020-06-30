@@ -15,7 +15,11 @@ namespace SlotMachine.Controllers
   /// </summary>
   public class HomeController : Controller
   {
+    /// <summary>
+    /// _slotmachine
+    /// </summary>
     private readonly ISlotMachine _slotmachine;
+
     /// <summary>
     /// HomeController constructor
     /// </summary>
