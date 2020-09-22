@@ -6,7 +6,7 @@ namespace SlotMachine.Common
   /// <summary>
   /// Constant class
   /// </summary>
-  public static class Constants
+  public static class ConstantsClass
   {
     /// <summary>
     /// SymbolNumber field

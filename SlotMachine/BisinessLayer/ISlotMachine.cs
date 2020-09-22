@@ -4,37 +4,37 @@ namespace SlotMachine.BisinessLayer
   using global::SlotMachine.Models;
 
   /// <summary>
-  /// ISlotMachine
+  /// ISlotMachine interface
   /// </summary>
   public interface ISlotMachine
   {
     /// <summary>
-    /// GetNewBettingCoefficents
+    /// GetNewBettingCoefficents contract
     /// </summary>
     /// <returns></returns>
     SlotMachineModel GetNewBettingCoefficents();
 
     /// <summary>
-    /// GetRandomNumberInRange
+    /// GetRandomNumberInRange contract
     /// </summary>
     /// <returns></returns>
     int GetRandomNumberInRange();
 
     /// <summary>
-    /// CalculateProfit
+    /// CalculateProfit contract
     /// </summary>
     /// <param name="bet"></param>
     void CalculateProfit(ref SlotMachineModel bet);
 
     /// <summary>
-    /// SumCoefficents
+    /// SumCoefficents contract
     /// </summary>
     /// <param name="coefficents"></param>
     /// <returns></returns>
     double SumCoefficents(ImageEntity coefficents);
 
     /// <summary>
-    /// AllEqual
+    /// AllEqual contract
     /// </summary>
     /// <param name="values"></param>
     /// <returns></returns>

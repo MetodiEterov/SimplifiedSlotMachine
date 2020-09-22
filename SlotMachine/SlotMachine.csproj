@@ -8,4 +8,6 @@
     <PackageReference Include="jQuery" Version="3.5.1" />
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties properties_4launchsettings_1json__JsonSchema="https://json.schemastore.org/json-patch" /></VisualStudio></ProjectExtensions>
+
 </Project>

@@ -7,14 +7,14 @@ namespace SlotMachine.BisinessLayer
 
   using global::SlotMachine.Common;
   using global::SlotMachine.Models;
- 
+
   /// <summary>
   /// SlotMachine
   /// </summary>
   public class SlotMachine : ISlotMachine
   {
     /// <summary>
-    /// AllEqual
+    /// AllEqual method
     /// </summary>
     /// <param name="values"></param>
     /// <returns></returns>
@@ -29,13 +29,12 @@ namespace SlotMachine.BisinessLayer
     }
 
     /// <summary>
-    /// CalculateProfit
+    /// CalculateProfit method
     /// </summary>
     /// <param name="bet"></param>
     public void CalculateProfit(ref SlotMachineModel bet)
     {
       double profit = 0;
-
       foreach (var item in bet.Sources)
       {
         double sum = Math.Round(this.SumCoefficents(item), 2);
@@ -80,31 +79,29 @@ namespace SlotMachine.BisinessLayer
     }
 
     /// <summary>
-    /// GetNewBettingCoefficents
+    /// GetNewBettingCoefficents method
     /// </summary>
     /// <returns></returns>
     public SlotMachineModel GetNewBettingCoefficents()
     {
       SlotMachineModel imageSources = new SlotMachineModel();
-      for (int i = 0; i < Constants.rowsNumber; i++)
+      for (int i = 0; i < ConstantsClass.rowsNumber; i++)
       {
         int leftCoefficent = this.GetRandomNumberInRange();
-        int leftSource = Constants.SymbolCoefficents.IndexOf(Constants.SymbolWeights[leftCoefficent]);
-
+        int leftSource = ConstantsClass.SymbolCoefficents.IndexOf(ConstantsClass.SymbolWeights[leftCoefficent]);
         int middleCoefficent = this.GetRandomNumberInRange();
-        int middleSource = Constants.SymbolCoefficents.IndexOf(Constants.SymbolWeights[middleCoefficent]);
-
+        int middleSource = ConstantsClass.SymbolCoefficents.IndexOf(ConstantsClass.SymbolWeights[middleCoefficent]);
         int rightCoefficent = this.GetRandomNumberInRange();
-        int rightSource = Constants.SymbolCoefficents.IndexOf(Constants.SymbolWeights[rightCoefficent]);
+        int rightSource = ConstantsClass.SymbolCoefficents.IndexOf(ConstantsClass.SymbolWeights[rightCoefficent]);
 
         ImageEntity source = new ImageEntity
         {
-          LeftSource = Constants.SymbolImageSources[leftSource],
-          LeftCoefficent = Constants.SymbolWeights[leftCoefficent],
-          MiddleSource = Constants.SymbolImageSources[middleSource],
-          MiddleCoefficent = Constants.SymbolWeights[middleCoefficent],
-          RightSource = Constants.SymbolImageSources[rightSource],
-          RightCoefficent = Constants.SymbolWeights[rightCoefficent]
+          LeftSource = ConstantsClass.SymbolImageSources[leftSource],
+          LeftCoefficent = ConstantsClass.SymbolWeights[leftCoefficent],
+          MiddleSource = ConstantsClass.SymbolImageSources[middleSource],
+          MiddleCoefficent = ConstantsClass.SymbolWeights[middleCoefficent],
+          RightSource = ConstantsClass.SymbolImageSources[rightSource],
+          RightCoefficent = ConstantsClass.SymbolWeights[rightCoefficent]
         };
 
         imageSources.Sources[i] = source;
@@ -114,17 +111,16 @@ namespace SlotMachine.BisinessLayer
     }
 
     /// <summary>
-    /// GetRandomNumberInRange
+    /// GetRandomNumberInRange method
     /// </summary>
     /// <returns></returns>
     public int GetRandomNumberInRange()
     {
-      Random random = new Random();
-      return random.Next(0, Constants.SymbolWeights.Count);
+      return new Random().Next(0, ConstantsClass.SymbolWeights.Count);
     }
 
     /// <summary>
-    /// SumCoefficents
+    /// SumCoefficents method
     /// </summary>
     /// <param name="coefficents"></param>
     /// <returns></returns>

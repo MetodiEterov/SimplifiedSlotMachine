@@ -16,7 +16,7 @@ namespace SlotMachineUnitTests
   public class SlotMachineUnitTests
   {
     /// <summary>
-    /// _slotmachine
+    /// _slotmachine field
     /// </summary>
     private readonly ISlotMachine _slotmachine;
 
@@ -44,48 +44,48 @@ namespace SlotMachineUnitTests
       SlotMachineModel testSlotMachine = new SlotMachineModel();
       ImageEntity row1 = new ImageEntity
       {
-        LeftSource = Constants.SymbolImageSources[1],
-        LeftCoefficent = Constants.SymbolCoefficents[1],
-        MiddleSource = Constants.SymbolImageSources[0],
-        MiddleCoefficent = Constants.SymbolCoefficents[0],
-        RightSource = Constants.SymbolImageSources[0],
-        RightCoefficent = Constants.SymbolCoefficents[0]
+        LeftSource = ConstantsClass.SymbolImageSources[1],
+        LeftCoefficent = ConstantsClass.SymbolCoefficents[1],
+        MiddleSource = ConstantsClass.SymbolImageSources[0],
+        MiddleCoefficent = ConstantsClass.SymbolCoefficents[0],
+        RightSource = ConstantsClass.SymbolImageSources[0],
+        RightCoefficent = ConstantsClass.SymbolCoefficents[0]
       };
       testSlotMachine.Sources[0] = row1;
 
       ImageEntity row2 = new ImageEntity
       {
-        LeftSource = Constants.SymbolImageSources[0],
-        LeftCoefficent = Constants.SymbolCoefficents[0],
-        MiddleSource = Constants.SymbolImageSources[0],
-        MiddleCoefficent = Constants.SymbolCoefficents[0],
-        RightSource = Constants.SymbolImageSources[0],
-        RightCoefficent = Constants.SymbolCoefficents[0]
+        LeftSource = ConstantsClass.SymbolImageSources[0],
+        LeftCoefficent = ConstantsClass.SymbolCoefficents[0],
+        MiddleSource = ConstantsClass.SymbolImageSources[0],
+        MiddleCoefficent = ConstantsClass.SymbolCoefficents[0],
+        RightSource = ConstantsClass.SymbolImageSources[0],
+        RightCoefficent = ConstantsClass.SymbolCoefficents[0]
       };
       testSlotMachine.Sources[1] = row2;
 
       ImageEntity row3 = new ImageEntity
       {
-        LeftSource = Constants.SymbolImageSources[0],
-        LeftCoefficent = Constants.SymbolCoefficents[0],
-        MiddleSource = Constants.SymbolImageSources[2],
-        MiddleCoefficent = Constants.SymbolCoefficents[2],
-        RightSource = Constants.SymbolImageSources[1],
-        RightCoefficent = Constants.SymbolCoefficents[1]
+        LeftSource = ConstantsClass.SymbolImageSources[0],
+        LeftCoefficent = ConstantsClass.SymbolCoefficents[0],
+        MiddleSource = ConstantsClass.SymbolImageSources[2],
+        MiddleCoefficent = ConstantsClass.SymbolCoefficents[2],
+        RightSource = ConstantsClass.SymbolImageSources[1],
+        RightCoefficent = ConstantsClass.SymbolCoefficents[1]
       };
       testSlotMachine.Sources[2] = row3;
 
       ImageEntity row4 = new ImageEntity
       {
-        LeftSource = Constants.SymbolImageSources[2],
-        LeftCoefficent = Constants.SymbolCoefficents[2],
-        MiddleSource = Constants.SymbolImageSources[0],
-        MiddleCoefficent = Constants.SymbolCoefficents[0],
-        RightSource = Constants.SymbolImageSources[0],
-        RightCoefficent = Constants.SymbolCoefficents[0]
+        LeftSource = ConstantsClass.SymbolImageSources[2],
+        LeftCoefficent = ConstantsClass.SymbolCoefficents[2],
+        MiddleSource = ConstantsClass.SymbolImageSources[0],
+        MiddleCoefficent = ConstantsClass.SymbolCoefficents[0],
+        RightSource = ConstantsClass.SymbolImageSources[0],
+        RightCoefficent = ConstantsClass.SymbolCoefficents[0]
       };
-
       testSlotMachine.Sources[3] = row4;
+
       testSlotMachine.Bet = 10;
       testSlotMachine.Balance = 200;
 
@@ -127,7 +127,7 @@ namespace SlotMachineUnitTests
       test = _slotmachine.GetRandomNumberInRange();
 
       // Assert
-      Assert.InRange<int>(test, 0, Constants.SymbolWeights.Count);
+      Assert.InRange<int>(test, 0, ConstantsClass.SymbolWeights.Count);
     }
   }
 }

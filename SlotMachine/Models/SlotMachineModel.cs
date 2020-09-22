@@ -13,7 +13,7 @@ namespace SlotMachine.Models
     /// </summary>
     public SlotMachineModel()
     {
-      Sources = new ImageEntity[Constants.rowsNumber];
+      Sources = new ImageEntity[ConstantsClass.rowsNumber];
     }
 
     /// <summary>
